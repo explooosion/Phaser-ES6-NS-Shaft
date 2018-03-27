@@ -1,6 +1,4 @@
 title: Phaser-ES6-NS-Shaft
 encoding: UTF-8
-redirect_win: {{site.baseurl}}/build
-redirect_mac: {{site.baseurl}}/build
-redirect_linux: {{site.baseurl}}/build
+baseurl: "/build/index.html"
 timezone: AsiaTaiwan
