@@ -11,7 +11,6 @@ export default class extends Phaser.Sprite {
 
         this.game.add.existing(this)
         this.game.physics.arcade.enable(this)
-        this.body.immovable = true
     }
 
     update() {
