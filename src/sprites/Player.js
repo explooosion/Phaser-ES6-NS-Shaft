@@ -11,6 +11,7 @@ export default class extends Phaser.Sprite {
 
         this.game.add.existing(this)
         this.game.physics.arcade.enable(this)
+        this.body.gravity.y = 500
 
         this.animations.add('left', [0, 1, 2, 3], 6)
         this.animations.add('right', [9, 10, 11, 12], 6)
