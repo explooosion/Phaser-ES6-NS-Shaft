@@ -1,8 +1,6 @@
 /* globals __DEV__ */
 import Phaser from 'phaser'
-import Mushroom from '../sprites/Mushroom'
-import Sky from '../sprites/Sky'
-import Ground from '../sprites/Ground'
+import Player from '../sprites/Player'
 
 export default class extends Phaser.State {
   init() {}
@@ -12,14 +10,17 @@ export default class extends Phaser.State {
 
     this.game.physics.startSystem(Phaser.Physics.ARCADE)
 
-    this.mushroom = new Mushroom({
+    this.player = new Player({
       game: this.game,
-      x: this.world.centerX,
-      y: this.world.centerY,
-      asset: 'mushroom',
+      x: 200,
+      y: 200,
+      asset: 'player',
     })
+    this.game.add.existing(this.player)
 
-    // this.game.add.existing(this.mushroom)
+  }
+
+  update() {
 
   }
 

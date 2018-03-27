@@ -27,6 +27,10 @@ class Game extends Phaser.Game {
   }
 }
 
+window.PhaserGlobal = {
+  disableAudio: true
+}
+
 window.game = new Game()
 
 if (window.cordova) {
