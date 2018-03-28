@@ -9,8 +9,8 @@ export default class extends Phaser.Sprite {
     }) {
         super(game, x, y, asset)
 
-        this.game.add.existing(this)
         this.game.physics.arcade.enable(this)
+        this.game.add.existing(this)
     }
 
     update() {

@@ -9,7 +9,10 @@ export default class extends Phaser.Sprite {
     }) {
         super(game, x, y, asset)
 
-        this.game.add.existing(this)
+        this.life = 10
+        this.touchOn = undefined
+        this.unbeatableTime = 0
+
         this.game.physics.arcade.enable(this)
         this.body.gravity.y = 500
 
@@ -18,11 +21,14 @@ export default class extends Phaser.Sprite {
         this.frame = 8
 
         this.keyboard = this.game.input.keyboard.addKeys({
+            'enter': Phaser.Keyboard.ENTER,
             'up': Phaser.Keyboard.UP,
             'down': Phaser.Keyboard.DOWN,
             'left': Phaser.Keyboard.LEFT,
             'right': Phaser.Keyboard.RIGHT
         })
+
+        this.game.add.existing(this)
     }
 
     update() {

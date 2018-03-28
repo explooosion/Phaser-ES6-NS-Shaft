@@ -28,7 +28,7 @@ class Game extends Phaser.Game {
 }
 
 window.PhaserGlobal = {
-  disableAudio: true
+  disableAudio: false
 }
 
 window.game = new Game()
