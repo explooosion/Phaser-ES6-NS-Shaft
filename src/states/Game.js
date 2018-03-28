@@ -103,14 +103,12 @@ export default class extends Phaser.State {
 
   checkTouchCeiling() {
     if (this.player.body.y < 0) {
-      if (this.player.body.velocity.y < 0) {
-        this.player.body.velocity.y = 0
-      }
       if (this.game.time.now > this.player.unbeatableTime) {
+        this.player.body.velocity.y = 0
         this.hitSound.play()
         this.player.life -= 3
         this.game.camera.flash(0xff0000, 100)
-        this.player.unbeatableTime = this.game.time.now + 1000
+        this.player.unbeatableTime = this.game.time.now + 600
       }
     }
   }

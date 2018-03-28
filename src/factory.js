@@ -21,7 +21,7 @@ export default class Factory {
             this.platforms = this.state.platforms
             this.platforms.add(new Platform({
                 game: this.game,
-                x: 200,
+                x: 100,
                 y: 240,
                 asset: 'normal',
             }))
@@ -114,7 +114,7 @@ export default class Factory {
     createPlayer() {
         this.state.player = new Player({
             game: this.game,
-            x: 200,
+            x: 100,
             y: 200,
             asset: 'player',
         })
