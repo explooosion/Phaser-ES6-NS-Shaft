@@ -28,6 +28,16 @@ export default class Factory {
         }
 
         if (this.game.time.now > this.state.lastTime + 1000) {
+
+            if (this.platforms.children.length === 0) {
+                this.platforms.add(new Platform({
+                    game: this.game,
+                    x: 100,
+                    y: 280,
+                    asset: 'normal',
+                }))
+            }
+
             this.state.lastTime = this.game.time.now
             const obj = Math.floor(Math.random() * 100)
             let objName = ''
@@ -115,7 +125,7 @@ export default class Factory {
         this.state.player = new Player({
             game: this.game,
             x: 100,
-            y: 200,
+            y: 150,
             asset: 'player',
         })
     }

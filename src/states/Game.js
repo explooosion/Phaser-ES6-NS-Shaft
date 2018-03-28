@@ -115,10 +115,10 @@ export default class extends Phaser.State {
 
   checkGameOver() {
     if (this.player.body.y > 450 || this.player.life <= 0) {
+      this.status = 'gameOver'
       this.deadSound.play()
       this.platforms.removeAll()
       this.gameover.visible = true
-      this.status = 'gameOver'
     }
   }
 
