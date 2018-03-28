@@ -21,6 +21,15 @@ export default class extends Phaser.State {
     this.load.image('nails', 'assets/images/nails.png');
   }
 
+  loadSound() {
+    this.load.audio('hit', 'assets/sounds/hit.wav');
+    this.load.audio('jump', 'assets/sounds/jump.ogg');
+    this.load.audio('dead', 'assets/sounds/dead.mp3');
+    this.load.audio('step', 'assets/sounds/step.mp3');
+    this.load.audio('fake', 'assets/sounds/fake.mp3');
+    this.load.audio('conveyor', 'assets/sounds/conveyor.mp3');
+  }
+
   preload() {
     this.loaderBg = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'loaderBg')
     this.loaderBar = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'loaderBar')
@@ -32,6 +41,7 @@ export default class extends Phaser.State {
 
     this.loadImage()
     this.loadSpritesheet()
+    this.loadSound()
 
   }
 
