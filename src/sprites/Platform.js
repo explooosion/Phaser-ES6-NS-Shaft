@@ -45,7 +45,7 @@ export default class extends Phaser.Sprite {
 
     update() {
 
-        this.body.y -= 1
+        this.body.y -= 2
 
         if (this.body.y < 0) {
             /** Auto Destroy In Group */
