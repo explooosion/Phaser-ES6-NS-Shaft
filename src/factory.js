@@ -119,4 +119,13 @@ export default class Factory {
             asset: 'player',
         })
     }
+
+    createSound() {
+        this.state.jumpSound = this.game.sound.add('jump')
+        this.state.hitSound = this.game.sound.add('hit')
+        this.state.deadSound = this.game.sound.add('dead')
+        this.state.stepSound = this.game.sound.add('step')
+        this.state.fakeSound = this.game.sound.add('fake')
+        this.state.conveyorSound = this.game.sound.add('conveyor')
+    }
 }

@@ -20,14 +20,7 @@ export default class extends Phaser.State {
     this.factory.createWorld()
     this.factory.createPlatforms()
     this.factory.createText()
-
-    this.jumpSound = this.game.sound.add('jump')
-    this.hitSound = this.game.sound.add('hit')
-    this.deadSound = this.game.sound.add('dead')
-    this.stepSound = this.game.sound.add('step')
-    this.fakeSound = this.game.sound.add('fake')
-    this.conveyorSound = this.game.sound.add('conveyor')
-
+    this.factory.createSound()
   }
 
   update() {
@@ -117,7 +110,7 @@ export default class extends Phaser.State {
         this.hitSound.play()
         this.player.life -= 3
         this.game.camera.flash(0xff0000, 100)
-        this.player.unbeatableTime = this.game.time.now + 2000
+        this.player.unbeatableTime = this.game.time.now + 1000
       }
     }
   }
